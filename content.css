@@ -1,0 +1,9 @@
+.figmaToDuda {
+    width: 116px;
+    height: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+    background: #f66035;
+    margin-left: 11px;
+}
