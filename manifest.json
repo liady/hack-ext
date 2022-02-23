@@ -9,9 +9,9 @@
   "permissions": ["storage", "activeTab", "scripting"],
   "content_scripts": [
     {
-      "matches": ["https://*.figma.com/*"],
+      "matches": ["https://*.figma.com/*", "https://blank.page/*"],
       "css": ["content.css"],
-      "js": ["content.js"]
+      "js": ["dist/index.js"]
     }
   ],
   "action": {
