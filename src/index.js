@@ -53,6 +53,8 @@ function insertButton() {
   buttonToInsert.addEventListener("click", triggerSiteCreation);
 }
 
+const domain = "my-test-mb-hack5.dud4.co";
+
 async function triggerSiteCreation() {
   const figmaData = getFigmaData();
   openCreationPopup();
@@ -66,6 +68,9 @@ async function triggerSiteCreation() {
     }).then((res) => res.json()),
     new Promise((resolve) => setTimeout(resolve, 5000)),
   ]);
+  const siteAlias = response.siteAlias || "abcd1234";
+  const windowUrl = `https://${domain}/home/site${siteAlias}`;
+  window.open(windowUrl, "_blank");
   console.log(response);
   closeCreationPopup();
 }
